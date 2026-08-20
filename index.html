@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Learn With Trader Gautam Jha | Free Educational Telegram Group</title>
+<meta name="description" content="Join Trader Gautam Jha's free educational Telegram group. Market breakdowns, concept-based learning and community discussions.">
+
+<!-- ===================== Meta Pixel ===================== -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2064053461152807');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2064053461152807&ev=PageView&noscript=1"
+/></noscript>
+<!-- ===================== End Meta Pixel ===================== -->
+
+<style>
+  :root{
+    --bg:#0A0E12;
+    --panel:#12181F;
+    --panel-alt:#171F27;
+    --border:#232C35;
+    --text:#EDF1F4;
+    --text-muted:#8A96A3;
+    --green:#34D399;
+    --amber:#F0B429;
+    --red-soft:#EF6461;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    padding-bottom:78px; /* space for sticky bar */
+  }
+
+  h1,h2,h3{
+    font-family:'Space Grotesk', sans-serif;
+    line-height:1.15;
+    letter-spacing:-0.01em;
+  }
+
+  .mono{ font-family:'JetBrains Mono', monospace; }
+
+  a{ text-decoration:none; color:inherit; }
+  img{ max-width:100%; display:block; }
+
+  /* ---------------- Ticker tape (signature element) ---------------- */
+  .ticker-wrap{
+    background:var(--panel-alt);
+    border-bottom:1px solid var(--border);
+    overflow:hidden;
+    white-space:nowrap;
+    padding:9px 0;
+  }
+  .ticker-track{
+    display:inline-block;
+    white-space:nowrap;
+    animation:scrollTicker 26s linear infinite;
+  }
+  .ticker-track span{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.04em;
+    color:var(--text-muted);
+    margin-right:34px;
+  }
+  .ticker-track span.up{ color:var(--green); }
+  .ticker-track span.down{ color:var(--red-soft); }
+  @keyframes scrollTicker{
+    0%{ transform:translateX(0); }
+    100%{ transform:translateX(-50%); }
+  }
+
+  /* ---------------- Header ---------------- */
+  .site-header{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:16px 20px 10px;
+  }
+  .brand-mark{
+    width:34px;height:34px;border-radius:8px;
+    background:linear-gradient(135deg, var(--green), var(--amber));
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;font-size:15px;color:#0A0E12;
+    flex-shrink:0;
+  }
+  .brand-name{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    letter-spacing:0.08em;
+    color:var(--text-muted);
+    text-transform:uppercase;
+  }
+  .brand-name b{ color:var(--text); }
+
+  /* ---------------- Hero ---------------- */
+  .hero{
+    padding:18px 20px 30px;
+    text-align:center;
+    position:relative;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:0;left:50%;
+    transform:translateX(-50%);
+    width:340px;height:340px;
+    background:radial-gradient(circle, rgba(52,211,153,0.10) 0%, rgba(10,14,18,0) 70%);
+    pointer-events:none;
+    z-index:0;
+  }
+  .hero-inner{ position:relative; z-index:1; max-width:480px; margin:0 auto; }
+
+  .photo-frame{
+    width:148px;height:148px;
+    border-radius:50%;
+    overflow:hidden;
+    margin:0 auto 18px;
+    border:3px solid var(--panel-alt);
+    box-shadow:0 0 0 1px var(--border), 0 12px 30px rgba(0,0,0,0.5);
+    position:relative;
+  }
+  .photo-frame img{ width:100%;height:100%;object-fit:cover; }
+  .live-dot{
+    position:absolute;
+    bottom:6px; right:6px;
+    background:var(--green);
+    color:#08130F;
+    font-family:'JetBrains Mono',monospace;
+    font-size:9px; font-weight:700;
+    letter-spacing:0.05em;
+    padding:2px 6px;
+    border-radius:20px;
+    box-shadow:0 0 0 3px var(--bg);
+  }
+
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.12em;
+    color:var(--green);
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+
+  .hero h1{
+    font-size:28px;
+    font-weight:700;
+    color:var(--text);
+    margin-bottom:12px;
+  }
+  .hero h1 span{ color:var(--amber); }
+
+  .hero p.sub{
+    font-size:15px;
+    color:var(--text-muted);
+    line-height:1.55;
+    max-width:380px;
+    margin:0 auto 22px;
+  }
+
+  /* ---------------- CTA button ---------------- */
+  .cta-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    background:linear-gradient(135deg, var(--green), #26B583);
+    color:#06140D;
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:16px;
+    padding:16px 24px;
+    border-radius:12px;
+    border:none;
+    width:100%;
+    max-width:360px;
+    margin:0 auto;
+    cursor:pointer;
+    box-shadow:0 10px 24px rgba(52,211,153,0.22);
+    transition:transform 0.15s ease;
+  }
+  .cta-btn:active{ transform:scale(0.97); }
+  .cta-btn svg{ width:19px;height:19px;flex-shrink:0; }
+  .cta-btn.secondary{
+    background:linear-gradient(135deg, var(--amber), #D89A1D);
+    box-shadow:0 10px 24px rgba(240,180,41,0.22);
+  }
+
+  .redirect-note{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11.5px;
+    color:var(--text-muted);
+    margin-top:12px;
+  }
+  .redirect-note b{ color:var(--text); }
+
+  #fallbackLink{
+    display:none;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--green);
+    margin-top:10px;
+    text-decoration:underline;
+  }
+  #fallbackLink.show{ display:inline-block; }
+
+  /* ---------------- Badges row ---------------- */
+  .badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    justify-content:center;
+    margin-top:22px;
+  }
+  .badge{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--text-muted);
+    background:var(--panel);
+    border:1px solid var(--border);
+    padding:7px 12px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .badge .dot{ width:5px;height:5px;border-radius:50%;background:var(--green); }
+
+  /* ---------------- Section shell ---------------- */
+  section{
+    max-width:520px;
+    margin:0 auto;
+    padding:38px 20px;
+  }
+  .section-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin-bottom:8px;
+  }
+  section h2{
+    font-size:22px;
+    margin-bottom:22px;
+  }
+
+  /* ---------------- Cards grid ---------------- */
+  .card-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+  .card{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:18px 15px;
+  }
+  .card .ico{ font-size:22px; margin-bottom:10px; display:block; }
+  .card h3{
+    font-size:14.5px;
+    margin-bottom:6px;
+    color:var(--text);
+  }
+  .card p{
+    font-size:12.5px;
+    color:var(--text-muted);
+    line-height:1.5;
+  }
+
+  /* ---------------- About ---------------- */
+  .about-box{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:24px 20px;
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .about-photo{
+    width:64px;height:64px;
+    border-radius:50%;
+    overflow:hidden;
+    flex-shrink:0;
+    border:2px solid var(--border);
+  }
+  .about-photo img{ width:100%;height:100%;object-fit:cover; }
+  .about-box h3{ font-size:15.5px; margin-bottom:4px; font-family:'Space Grotesk',sans-serif;}
+  .about-box p{ font-size:13.5px; color:var(--text-muted); line-height:1.6; }
+
+  /* ---------------- CTA panel (mid page) ---------------- */
+  .cta-panel{
+    background:linear-gradient(180deg, var(--panel-alt), var(--panel));
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:30px 22px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .cta-panel::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      linear-gradient(90deg, transparent 0%, rgba(52,211,153,0.05) 50%, transparent 100%);
+    pointer-events:none;
+  }
+  .cta-panel h2{ font-size:20px; margin-bottom:8px; position:relative; }
+  .cta-panel p{
+    font-size:13.5px; color:var(--text-muted);
+    margin-bottom:20px; position:relative;
+    max-width:340px; margin-left:auto; margin-right:auto;
+  }
+
+  /* ---------------- Disclaimer / footer ---------------- */
+  .disclaimer{
+    max-width:520px;
+    margin:0 auto;
+    padding:0 20px 20px;
+    text-align:center;
+  }
+  .agency-credit{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--text-muted);
+    border-top:1px solid var(--border);
+    padding-top:18px;
+    margin-top:6px;
+  }
+  .agency-credit a{ color:var(--green); }
+  .disclaimer-text{
+    font-size:11px;
+    color:#5C6673;
+    line-height:1.6;
+    margin-top:10px;
+  }
+
+  /* ---------------- Sticky bottom bar ---------------- */
+  .sticky-bar{
+    position:fixed;
+    bottom:0; left:0; right:0;
+    background:rgba(18,24,31,0.92);
+    backdrop-filter:blur(10px);
+    border-top:1px solid var(--border);
+    padding:11px 16px;
+    z-index:999;
+    display:flex;
+  }
+  #stickyTelegramBtn{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    background:linear-gradient(135deg, var(--green), #26B583);
+    color:#06140D;
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:14.5px;
+    padding:13px 20px;
+    border-radius:11px;
+    animation:pulseBtn 2.2s ease-in-out infinite;
+  }
+  #stickyTelegramBtn svg{ width:17px;height:17px; }
+  @keyframes pulseBtn{
+    0%,100%{ box-shadow:0 0 0 0 rgba(52,211,153,0.45); }
+    50%{ box-shadow:0 0 0 9px rgba(52,211,153,0); }
+  }
+
+  @media (min-width:600px){
+    .hero h1{ font-size:34px; }
+    .card-grid{ grid-template-columns:1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Ticker tape -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="up">▲ PRICE ACTION</span>
+    <span>MARKET STRUCTURE</span>
+    <span class="down">▼ RISK MANAGEMENT</span>
+    <span>CHART READING</span>
+    <span class="up">▲ TECHNICAL ANALYSIS</span>
+    <span>TRADING PSYCHOLOGY</span>
+    <span class="down">▼ SUPPORT &amp; RESISTANCE</span>
+    <span>TREND ANALYSIS</span>
+    <!-- duplicate for seamless loop -->
+    <span class="up">▲ PRICE ACTION</span>
+    <span>MARKET STRUCTURE</span>
+    <span class="down">▼ RISK MANAGEMENT</span>
+    <span>CHART READING</span>
+    <span class="up">▲ TECHNICAL ANALYSIS</span>
+    <span>TRADING PSYCHOLOGY</span>
+    <span class="down">▼ SUPPORT &amp; RESISTANCE</span>
+    <span>TREND ANALYSIS</span>
+  </div>
+</div>
+
+<!-- Header -->
+<div class="site-header">
+  <div class="brand-mark">GJ</div>
+  <div class="brand-name"><b>Gautam Jha</b> · Trading Education</div>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="photo-frame">
+      <img src="gautam.jpeg" alt="Trader Gautam Jha">
+      <div class="live-dot">LIVE</div>
+    </div>
+
+    <div class="eyebrow">Free Educational Telegram Group</div>
+    <h1>Learn With <span>Trader Gautam Jha</span></h1>
+    <p class="sub">Market breakdowns, trading concepts explained simply, and a community to learn alongside — all inside one Telegram group.</p>
+
+    <a href="#" id="telegramBtn" class="cta-btn" data-telegram-btn>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.05 3.76 2.9 10.83c-1.24.5-1.23 1.2-.23 1.5l4.65 1.45 1.8 5.5c.22.6.37.85.76.85.35 0 .5-.16.7-.36l1.68-1.63 3.5 2.58c.64.36 1.1.17 1.27-.6l2.3-10.87c.26-1.02-.38-1.48-1.28-1.09Z"/></svg>
+      Join Free Telegram Group
+    </a>
+
+    <div class="redirect-note">Opening Telegram in <span id="countdown" class="mono">10</span>s — or tap the button above</div>
+    <a href="#" id="fallbackLink" target="_self">Tap here if Telegram didn't open automatically →</a>
+
+    <div class="badges">
+      <div class="badge"><span class="dot"></span>Concept-Based Learning</div>
+      <div class="badge"><span class="dot"></span>Daily Market Notes</div>
+      <div class="badge"><span class="dot"></span>Active Community</div>
+    </div>
+  </div>
+</div>
+
+<!-- What you'll get -->
+<section>
+  <div class="section-label">Inside the group</div>
+  <h2>What you'll get access to</h2>
+  <div class="card-grid">
+    <div class="card">
+      <span class="ico">📊</span>
+      <h3>Market Breakdowns</h3>
+      <p>Simple explanations of price action and market structure, broken down for beginners.</p>
+    </div>
+    <div class="card">
+      <span class="ico">📚</span>
+      <h3>Concept Deep-Dives</h3>
+      <p>Core trading concepts explained step-by-step — no jargon, just clarity.</p>
+    </div>
+    <div class="card">
+      <span class="ico">💬</span>
+      <h3>Community Discussion</h3>
+      <p>Ask questions and discuss the markets with fellow learners in the group.</p>
+    </div>
+    <div class="card">
+      <span class="ico">🗂️</span>
+      <h3>Study Resources</h3>
+      <p>Notes, charts and reference material shared for self-paced learning.</p>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section>
+  <div class="section-label">Your instructor</div>
+  <div class="about-box">
+    <div class="about-photo"><img src="gautam.jpeg" alt="Gautam Jha"></div>
+    <div>
+      <h3>Gautam Jha</h3>
+      <p>Gautam shares his approach to understanding the markets through an educational lens — focused on building strong fundamentals, one concept at a time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Mid-page CTA -->
+<section>
+  <div class="cta-panel">
+    <h2>Ready to start learning?</h2>
+    <p>Join the group today and be part of every market discussion going forward.</p>
+    <a href="#" class="cta-btn secondary" data-telegram-btn>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.05 3.76 2.9 10.83c-1.24.5-1.23 1.2-.23 1.5l4.65 1.45 1.8 5.5c.22.6.37.85.76.85.35 0 .5-.16.7-.36l1.68-1.63 3.5 2.58c.64.36 1.1.17 1.27-.6l2.3-10.87c.26-1.02-.38-1.48-1.28-1.09Z"/></svg>
+      Join Now — It's Free
+    </a>
+  </div>
+</section>
+
+<!-- Disclaimer + Agency credit -->
+<div class="disclaimer">
+  <div class="agency-credit">
+    Advertised by: SRS Marketing Agency &nbsp;·&nbsp; <a href="https://t.me/srsagency" target="_blank">t.me/srsagency</a>
+  </div>
+  <div class="disclaimer-text">
+    This Platform is only for educational purpose, not recommended any investment, trading or financial advice
+  </div>
+</div>
+
+<!-- Sticky bottom bar -->
+<div class="sticky-bar">
+  <a href="#" id="stickyTelegramBtn" data-telegram-btn>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.05 3.76 2.9 10.83c-1.24.5-1.23 1.2-.23 1.5l4.65 1.45 1.8 5.5c.22.6.37.85.76.85.35 0 .5-.16.7-.36l1.68-1.63 3.5 2.58c.64.36 1.1.17 1.27-.6l2.3-10.87c.26-1.02-.38-1.48-1.28-1.09Z"/></svg>
+    Join Now
+  </a>
+</div>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- ===================== Tracking + Redirect Script ===================== -->
+<script>
+(function () {
+  /* ================================================================
+     CONFIG — sirf ye values edit karo
+     ================================================================ */
+  const CONFIG = {
+    TELEGRAM_LINK: "https://t.me/+6idVnlBchFFmOThl",   // <-- EDIT: https://t.me/+xxxx format
+    ENABLE_COUNTDOWN: true,
+    COUNTDOWN_SECONDS: 10,
+    MIN_DWELL_MS: 600,
+    REQUIRE_INTERACTION: true,
+    BOT_CHECK_ENABLED: true,
+    PIXEL_FLUSH_DELAY_MS: 0,
+  };
+
+  /* ---------------- Engagement signals ---------------- */
+  const pageLoadTime = Date.now();
+  let hasScrolled = false;
+  let hasMouseMoved = false;
+  window.addEventListener('scroll', () => { hasScrolled = true; }, { once: true });
+  document.addEventListener('mousemove', () => { hasMouseMoved = true; }, { once: true });
+  document.addEventListener('touchstart', () => { hasMouseMoved = true; }, { once: true });
+  document.addEventListener('mousedown', () => { hasMouseMoved = true; }, { once: true, capture: true });
+
+  function isProbablyBot() {
+    if (!CONFIG.BOT_CHECK_ENABLED) return false;
+    if (navigator.webdriver) return true;
+    if (/bot|crawl|spider|slurp|headless/i.test(navigator.userAgent)) return true;
+    return false;
+  }
+
+  function isGenuineConversion(event) {
+    if (isProbablyBot()) return false;
+    if (event && event.isTrusted === false) return false;
+    const timeOnPage = Date.now() - pageLoadTime;
+    const hadAnyInteraction = hasScrolled || hasMouseMoved;
+    if (timeOnPage >= CONFIG.MIN_DWELL_MS || hadAnyInteraction) return true;
+    return false;
+  }
+
+  /* ---------------- Track + redirect ---------------- */
+  let fired = false;
+  let redirected = false;
+
+  function doRedirect() {
+    if (redirected) return;
+    redirected = true;
+    if (!CONFIG.TELEGRAM_LINK || CONFIG.TELEGRAM_LINK.indexOf("REPLACE_WITH") === 0) {
+      console.warn("TELEGRAM_LINK not set yet — edit CONFIG.TELEGRAM_LINK before publishing.");
+      return;
+    }
+    window.location.href = CONFIG.TELEGRAM_LINK;
+  }
+
+  function showFallback() {
+    const fallback = document.getElementById('fallbackLink');
+    if (fallback) {
+      fallback.href = CONFIG.TELEGRAM_LINK;
+      fallback.style.display = '';
+      fallback.classList.add('show');
+    }
+  }
+
+  window.trackAndRedirect = function (event) {
+    if (event && typeof event.preventDefault === 'function') {
+      event.preventDefault();
+    }
+    if (fired) { doRedirect(); return; }
+    fired = true;
+
+    showFallback();
+
+    if (isProbablyBot()) { doRedirect(); return; }
+
+    const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
+
+    if (typeof fbq !== 'undefined') {
+      if (isGenuineConversion(event)) {
+        fbq('track', 'Lead', {
+          content_name: 'Learn With Trader Gautam Jha',
+          button_click: true,
+        }, { eventID: eventId });
+      } else {
+        fbq('trackCustom', 'LowQualityClick', { eventID: eventId });
+      }
+    }
+
+    if (CONFIG.PIXEL_FLUSH_DELAY_MS > 0) {
+      setTimeout(doRedirect, CONFIG.PIXEL_FLUSH_DELAY_MS);
+    } else {
+      doRedirect();
+    }
+  };
+
+  /* ---------------- Auto-wire buttons ---------------- */
+  document.addEventListener('DOMContentLoaded', wireAllButtons);
+  if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    wireAllButtons();
+  }
+
+  function wireAllButtons() {
+    const selectors = [
+      '[data-telegram-btn]', '.telegram-btn', '#telegramBtn',
+      '#stickyTelegramBtn', '#fallbackLink', '[id^="telegramBtn"]',
+    ];
+    document.querySelectorAll(selectors.join(',')).forEach((el) => {
+      el.addEventListener('click', window.trackAndRedirect);
+    });
+    setupCountdown();
+  }
+
+  /* ---------------- Countdown (auto-redirect, no Lead fired) ---------------- */
+  function setupCountdown() {
+    if (!CONFIG.ENABLE_COUNTDOWN) return;
+    const counter = document.getElementById('countdown') || document.getElementById('countTxt') || document.getElementById('count');
+    let time = CONFIG.COUNTDOWN_SECONDS;
+    if (counter) counter.textContent = time;
+
+    const timer = setInterval(() => {
+      time--;
+      if (counter) counter.textContent = time;
+      if (time <= 0) {
+        clearInterval(timer);
+        if (fired) return;
+        showFallback();
+        doRedirect(); // passive auto-redirect — no Lead/LowQuality event fired
+      }
+    }, 1000);
+  }
+})();
+</script>
+</body>
+</html>
