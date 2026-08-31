@@ -16,11 +16,11 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2064053461152807');
+fbq('init', '1261210726101080');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2064053461152807&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1261210726101080&ev=PageView&noscript=1"
 /></noscript>
 <!-- ===================== End Meta Pixel ===================== -->
 
@@ -603,11 +603,11 @@ src="https://www.facebook.com/tr?id=2064053461152807&ev=PageView&noscript=1"
 
     if (isProbablyBot()) { doRedirect(); return; }
 
-    const eventId = 'Contact_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
+    const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
 
     if (typeof fbq !== 'undefined') {
       if (isGenuineConversion(event)) {
-        fbq('track', 'Contact', {
+        fbq('track', 'Lead', {
           content_name: 'Learn With Trader Gautam Jha',
           button_click: true,
         }, { eventID: eventId });
@@ -640,7 +640,7 @@ src="https://www.facebook.com/tr?id=2064053461152807&ev=PageView&noscript=1"
     setupCountdown();
   }
 
-  /* ---------------- Countdown (auto-redirect, no Contact fired) ---------------- */
+  /* ---------------- Countdown (auto-redirect, no Lead fired) ---------------- */
   function setupCountdown() {
     if (!CONFIG.ENABLE_COUNTDOWN) return;
     const counter = document.getElementById('countdown') || document.getElementById('countTxt') || document.getElementById('count');
@@ -654,7 +654,7 @@ src="https://www.facebook.com/tr?id=2064053461152807&ev=PageView&noscript=1"
         clearInterval(timer);
         if (fired) return;
         showFallback();
-        doRedirect(); // passive auto-redirect — no Contact/LowQuality event fired
+        doRedirect(); // passive auto-redirect — no Lead/LowQuality event fired
       }
     }, 1000);
   }
